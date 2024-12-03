@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
     declarations: [
         AppComponent
     ],
+    // It is important import all modules that we want to use on our app
     imports: [
         BrowserModule,
         AppRoutingModule,
