@@ -2,14 +2,14 @@ import { UpperCasePipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
 
 @Component({
-  selector: 'app-hero-page',
-  standalone: true,
-  imports: [
-    UpperCasePipe
-  ],
-  templateUrl: './hero-page.component.html',
-  styleUrl: './hero-page.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-hero-page',
+    standalone: true,
+    imports: [
+        UpperCasePipe
+    ],
+    templateUrl: './hero-page.component.html',
+    styleUrl: './hero-page.component.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeroPageComponent {
 
@@ -26,20 +26,20 @@ export class HeroPageComponent {
         return upperName;
     });
 
-    getHeroDescription(){
+    getHeroDescription() {
         return `${this.nameSignal()} + ${this.ageSignal()}`;
     }
 
-    changeHero(){
+    changeHero() {
         this.nameSignal.set('Spiderman');
         this.ageSignal.set(22);
     }
 
-    changeAge(){
+    changeAge() {
         this.ageSignal.set(60);
     }
 
-    resetForm(){
+    resetForm() {
         this.nameSignal.set('Ironman');
         this.ageSignal.set(45);
     }
